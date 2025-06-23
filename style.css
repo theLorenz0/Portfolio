@@ -1,0 +1,909 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kings&family=Montaga&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quintessential&display=swap');
+
+
+/*-------------basis en fonts--------------*/
+* {
+  margin: 0;
+   font-family: "Cormorant Garamond", serif;
+  color: #000000;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*-------------navigatie--------------*/
+header {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  padding-top: 0.5em;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 1em 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 2em;
+  transition: font-size 0.2s ease-in-out; /* ➤ zorgt dat het soepel verandert */
+}
+
+
+nav ul a:hover {
+  color: #992121;
+  font-size: 2.1em; /* ➤ iets groter dan 2em */
+  transition: font-size 0.2s ease-in-out;
+}
+
+
+
+
+/*-------------boven de vouw--------------*/
+.bovendevouw {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  height: 500px;
+  background: url("./images/achtergrond2.png") no-repeat center center;
+  background-size: cover;
+  padding: 3rem;
+  gap: 2rem;
+}
+
+.bovendevouw h1 {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  align-self: end;
+  font-weight: 700;
+  font-size: 7rem;
+  margin: 0;
+}
+
+.bovendevouw h2 {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  font-weight: 100;
+  font-size: 4rem;
+  margin: 0;
+}
+
+/* Contact info binnen bovendevouw */
+.bovendevouw .contact-info {
+  grid-column: 1 / 2;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.bovendevouw .contact-info div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.bovendevouw .contact-info img {
+  width: 50px;
+  height: px;
+}
+
+
+.bovendevouw .contact-info span {
+  font-size: 1.25rem;
+   font-family: "Montserrat", sans-serif;
+}
+
+body.contactpagina {
+  overflow: hidden;
+}
+.contactpagina .bovendevouw {
+  background: url("./images/achtergrond2.png") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: block;
+  padding: 4rem 5rem 4rem 5rem;
+}
+
+.contactpagina .bovendevouw h1 {
+  font-size: 7rem;
+  margin-bottom: 0.6em;
+  text-align: left;
+  font-weight: 700;
+}
+
+.contactpagina .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contactpagina .contact-info div {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.contactpagina .contact-info img {
+  width: 60px;
+  height: 60px;
+}
+
+.contactpagina .contact-info span,
+.contactpagina .contact-info a {
+  font-size: 1.3rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+/*-------------about-me-styling--------------*/
+.-text {
+  color: black;
+}
+
+.about-text h1 {
+  font-size: em;
+  margin-bottom: 0.3em;
+}
+
+.about-text h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.about-text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bovendevouw h3 {
+  grid-column: 2 / 3;
+  grid-row: 2;
+  justify-self: end;
+  align-self: end;
+  font-weight: 100;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.terug-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+
+.terug-link img {
+  height: 1.2em;
+}
+
+/*-------------onder de vouw: projecten--------------*/
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.projecttekst {
+  margin: 3rem 0 3rem 3rem;
+}
+
+.projecttekst h4 {
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
+  
+  font-family: "Cormorant Garamond", serif;
+}
+
+.projecttekst p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0 0 1.5rem 0;
+  max-width: 1000px;
+}
+
+.cv-links {
+  padding: 3rem;
+  max-width: 1000px;
+}
+
+.cv-links h3 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.cv-links ul {
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+  list-style-type: disc;
+  line-height: 1.6;
+}
+
+.cv-links li {
+  margin-bottom: 0.7rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.cv-links p {
+  font-size: 1.1rem;
+   font-family: "Montserrat", sans-serif;
+  margin-top: 0.5rem;
+}
+
+/*-------------projecten alleen op homepage--------------*/
+.homepage .projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.homepage .overlay-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 0;
+  height: 100%; /* Zorgt ervoor dat img in de container blijft */
+  text-decoration: none;
+  color: inherit; /* behoudt normale tekstkleur */
+}
+
+.homepage .overlay-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.homepage .overlay-container:hover img {
+  transform: scale(1.03); /* Kleinere zoom, bv. 1.03 in plaats van 1.1 */
+}
+
+.homepage .overlay,
+.homepage .overlay-text {
+  display: none;
+}
+
+.homepage .project-title {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.projectachtergrond {
+  height: 700px; /* zelfde hoogte als .bovendevouw1 */
+  background: url("./images/projectachtergrond1.png") no-repeat center center;
+  background-size: cover;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bovendevouw1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* i.p.v. center */
+  padding: 2rem 3rem 3rem 3rem; /* minder bovenruimte */
+  gap: 1.5rem;
+  min-height: 450px; /* iets lager dan 500px */
+  background: url("./images/achtergrond3.png") no-repeat center center;
+  background-size: cover;
+}
+
+.bovendevouw1 .terug-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+.bovendevouw1 .terug-link img {
+  height: 1.5rem;
+}
+.bovendevouw1 .terug-link:hover {
+  font-size: 1.7rem; /* iets groter bij hover */
+  transition: all 0.2s ease; /* vloeiende overgang */
+}
+
+.bovendevouw1 .terug-link:hover img {
+  transform: scale(1.1); /* icoontje iets vergroten */
+  transition: transform 0.2s ease;
+}
+
+.bovendevouw1 h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bovendevouw1 h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+
+.bovendevouw2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* i.p.v. center */
+  padding: 2rem 3rem 3rem 3rem; /* minder bovenruimte */
+  gap: 1.5rem;
+  min-height: 500px; /* iets lager dan 500px */
+  background: url("./images/passieproject1.png") no-repeat center center;
+  background-size: cover;
+}
+
+.bovendevouw2 .terug-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+.bovendevouw2 .terug-link img {
+  height: 1.5rem;
+}
+.bovendevouw2 .terug-link:hover {
+  font-size: 1.7rem; /* iets groter bij hover */
+  transition: all 0.2s ease; /* vloeiende overgang */
+}
+
+.bovendevouw2 .terug-link:hover img {
+  transform: scale(1.1); /* icoontje iets vergroten */
+  transition: transform 0.2s ease;
+}
+
+.bovendevouw2 h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bovendevouw2 h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+
+
+
+.projectachtergrond2 {
+  height: 400px; /* zelfde hoogte als .bovendevouw1 */
+  background: url("./images/passieproject2.png") no-repeat center center;
+  background-size: cover;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bovendevouw3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* i.p.v. center */
+  padding: 2rem 3rem 3rem 3rem; /* minder bovenruimte */
+  gap: 1.5rem;
+  min-height: 500px; /* iets lager dan 500px */
+  background: url("./images/vid1.png") no-repeat center center;
+  background-size: cover;
+}
+
+.bovendevouw3 .terug-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+.bovendevouw3 .terug-link img {
+  height: 1.5rem;
+}
+.bovendevouw3 .terug-link:hover {
+  font-size: 1.7rem; /* iets groter bij hover */
+  transition: all 0.2s ease; /* vloeiende overgang */
+}
+
+.bovendevouw3 .terug-link:hover img {
+  transform: scale(1.1); /* icoontje iets vergroten */
+  transition: transform 0.2s ease;
+}
+
+.bovendevouw3 h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bovendevouw3 h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+
+
+
+.projectachtergrond3 {
+  height: 1200px; /* zelfde hoogte als .bovendevouw1 */
+  background: url("./images/vid2.png") no-repeat center center;
+  background-size: cover;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.bovendevouw4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* i.p.v. center */
+  padding: 2rem 3rem 3rem 3rem; /* minder bovenruimte */
+  gap: 1.5rem;
+  min-height: 550px; /* iets lager dan 500px */
+  background: url("./images/onepager1.png") no-repeat center center;
+  background-size: cover;
+}
+
+.bovendevouw4 .terug-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+.bovendevouw4 .terug-link img {
+  height: 1.5rem;
+}
+.bovendevouw4 .terug-link:hover {
+  font-size: 1.7rem; /* iets groter bij hover */
+  transition: all 0.2s ease; /* vloeiende overgang */
+}
+
+.bovendevouw4 .terug-link:hover img {
+  transform: scale(1.1); /* icoontje iets vergroten */
+  transition: transform 0.2s ease;
+}
+
+.bovendevouw4 h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bovendevouw4 h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+
+
+
+.projectachtergrond4 {
+  height: 5000px; /* zelfde hoogte als .bovendevouw1 */
+  background: url("./images/onepager2.png") no-repeat center center;
+  background-size: cover;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.bovendevouw5 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* i.p.v. center */
+  padding: 2rem 3rem 3rem 3rem; /* minder bovenruimte */
+  gap: 1.5rem;
+  min-height: 550px; /* iets lager dan 500px */
+  background: url("./images/hhk1.png") no-repeat center center;
+  background-size: cover;
+}
+
+.bovendevouw5 .terug-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+.bovendevouw5 .terug-link img {
+  height: 1.5rem;
+}
+.bovendevouw5 .terug-link:hover {
+  font-size: 1.7rem; /* iets groter bij hover */
+  transition: all 0.2s ease; /* vloeiende overgang */
+}
+
+.bovendevouw5 .terug-link:hover img {
+  transform: scale(1.1); /* icoontje iets vergroten */
+  transition: transform 0.2s ease;
+}
+
+.bovendevouw5 h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bovendevouw5 h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+
+
+
+.projectachtergrond5 {
+  height: 1100px; /* zelfde hoogte als .bovendevouw1 */
+  background: url("./images/hhk2.png") no-repeat center center;
+  background-size: cover;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.bovendevouw6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* i.p.v. center */
+  padding: 2rem 3rem 3rem 3rem; /* minder bovenruimte */
+  gap: 1.5rem;
+  min-height: 550px; /* iets lager dan 500px */
+  background: url("./images/groenestad1.png") no-repeat center center;
+  background-size: cover;
+}
+
+.bovendevouw6 .terug-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+.bovendevouw6 .terug-link img {
+  height: 1.5rem;
+}
+.bovendevouw6 .terug-link:hover {
+  font-size: 1.7rem; /* iets groter bij hover */
+  transition: all 0.2s ease; /* vloeiende overgang */
+}
+
+.bovendevouw6 .terug-link:hover img {
+  transform: scale(1.1); /* icoontje iets vergroten */
+  transition: transform 0.2s ease;
+}
+
+
+.bovendevouw6 h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bovendevouw6 h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+
+
+
+.projectachtergrond6 {
+  height: 1400px; /* zelfde hoogte als .bovendevouw1 */
+  background: url("./images/groenestad2.png") no-repeat center center;
+  background-size: cover;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.bovendevouw7 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* i.p.v. center */
+  padding: 2rem 3rem 3rem 3rem; /* minder bovenruimte */
+  gap: 1.5rem;
+  min-height: 550px; /* iets lager dan 500px */
+  background: url("./images/kaft1.png") no-repeat center center;
+  background-size: cover;
+}
+
+.bovendevouw7 .terug-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+.bovendevouw7 .terug-link img {
+  height: 1.5rem;
+}
+
+.bovendevouw7 .terug-link:hover {
+  font-size: 1.7rem; /* iets groter bij hover */
+  transition: all 0.2s ease; /* vloeiende overgang */
+}
+
+.bovendevouw7 .terug-link:hover img {
+  transform: scale(1.1); /* icoontje iets vergroten */
+  transition: transform 0.2s ease;
+}
+
+.bovendevouw7 h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bovendevouw7 h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+
+/*-------------boven de vouw--------------*/
+.bovendevouwhome {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  height: 400px;
+  background: url("./images/achtergrond2.png") no-repeat center center;
+  background-size: cover;
+  padding: 3rem;
+  gap: 2rem;
+}
+
+.bovendevouwhome h1 {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  align-self: end;
+  font-weight: 700;
+  font-size: 7rem;
+  margin: 0;
+}
+
+.bovendevouwhome h2 {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  font-weight: 100;
+  font-size: 4rem;
+  margin: 0;
+}
+
+
+
+.bovendevouw8 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* i.p.v. center */
+  padding: 2rem 3rem 3rem 3rem; /* minder bovenruimte */
+  gap: 1.5rem;
+  min-height: 600px; /* iets lager dan 500px */
+  background: url("./images/riceninja1.png") no-repeat center center;
+  background-size: cover;
+}
+
+.bovendevouw8 .terug-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+
+.bovendevouw8 .terug-link img {
+  height: 1.5rem;
+}
+
+.bovendevouw8 .terug-link:hover {
+  font-size: 1.7rem; /* iets groter bij hover */
+  transition: all 0.2s ease; /* vloeiende overgang */
+}
+
+.bovendevouw8 .terug-link:hover img {
+  transform: scale(1.1); /* icoontje iets vergroten */
+  transition: transform 0.2s ease;
+}
+
+.bovendevouw8 h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bovendevouw8 h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+
+
+
+.projectachtergrond8 {
+  height: 500px; /* zelfde hoogte als .bovendevouw1 */
+  background: url("./images/riceninja2.png") no-repeat center center;
+  background-size: cover;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.bovendevouw9 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* i.p.v. center */
+  padding: 2rem 3rem 3rem 3rem; /* minder bovenruimte */
+  gap: 1.5rem;
+  min-height: 600px; /* iets lager dan 500px */
+  background: url("./images/game1.png") no-repeat center center;
+  background-size: cover;
+}
+
+.bovendevouw9 .terug-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+
+.bovendevouw9 .terug-link img {
+  height: 1.5rem;
+}
+
+.bovendevouw9 .terug-link:hover {
+  font-size: 1.7rem; /* iets groter bij hover */
+  transition: all 0.2s ease; /* vloeiende overgang */
+}
+
+.bovendevouw9 .terug-link:hover img {
+  transform: scale(1.1); /* icoontje iets vergroten */
+  transition: transform 0.2s ease;
+}
+
+.bovendevouw9 h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bovendevouw9 h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+
+.bovendevouw10 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* i.p.v. center */
+  padding: 2rem 3rem 3rem 3rem; /* minder bovenruimte */
+  gap: 1.5rem;
+  min-height: 600px; /* iets lager dan 500px */
+  background: url("./images/website1.png") no-repeat center center;
+  background-size: cover;
+}
+
+.bovendevouw10 .terug-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+
+.bovendevouw10 .terug-link img {
+  height: 1.5rem;
+}
+
+.bovendevouw10 .terug-link:hover {
+  font-size: 1.7rem; /* iets groter bij hover */
+  transition: all 0.2s ease; /* vloeiende overgang */
+}
+
+.bovendevouw10 .terug-link:hover img {
+  transform: scale(1.1); /* icoontje iets vergroten */
+  transition: transform 0.2s ease;
+}
+
+.bovendevouw10 h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.bovendevouw10 h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-top: 2rem;
+}
+
+
